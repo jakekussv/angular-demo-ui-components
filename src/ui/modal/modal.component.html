@@ -1,0 +1,24 @@
+<div *ngIf="visible">
+  <div id="{{modalId}}Modal" role="dialog" aria-labelledby="modal-title" tabindex="-1" class="modal-component">
+    <div class="modal-dialog" [@dialog]>
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center justify-content-between">
+          <h2>{{ title }}</h2>
+          <button (click)="close()" type="button" class="close" aria-label="Close">
+							<span aria-hidden="true">
+                <span> X </span>
+							</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- We need ngTemplateOutlet here so we can inject components into our modals and have
+          them instantiate fresh each time and to avoid issues with angular life cycle
+          instantiating components before they have all the data they need -->
+          <ng-container *ngTemplateOutlet="modalBodyTemplate"></ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="visible" (click)="close()" class="modal-overlay"></div>

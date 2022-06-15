@@ -1,0 +1,49 @@
+.modal-component {
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: block;
+  z-index: 10001;
+
+  .modal-dialog {
+    margin: 3rem auto;
+
+    .modal-content {
+
+      .modal-header {
+        background-color: #FFF;
+        border-bottom: 1px solid grey;
+        padding: 0.5rem 1rem;
+
+        .close {
+          background-color: transparent;
+          border: 0;
+          cursor: pointer;
+          margin-top: 0.5rem;
+          padding: 0;
+        }
+      }
+
+      .modal-body {
+        padding: 1rem;
+        position: relative;
+      }
+    }
+  }
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+

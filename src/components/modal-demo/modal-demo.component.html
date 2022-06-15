@@ -1,0 +1,16 @@
+<div class="container  d-flex justify-content-center align-items-center">
+  <div class="row">
+    <div class="col">
+      <button (click)="showModal()"> Launch Modal </button>
+    </div>
+  </div>
+</div>
+
+
+<modal title="Demo Modal" modalId="demoModal">
+  <ng-template #modalBody>
+    <p>
+      This is some content in a modal
+    </p>
+  </ng-template>
+</modal>
