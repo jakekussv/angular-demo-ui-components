@@ -1,27 +1,31 @@
-# AngularCarousel
+# Angular - Carousel / Modal Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+### Problem statement
+This was a personal project I did in my spare time to learn a little of the latest version of Angular.
+I wanted to see about creating a responsive 'carousel' component with Angular that loads in random images on the start
+from . Every 5 seconds, it then loads in more and the user can navigate through them with the arrows. I also wanted to see about creating
+a custom modal dialog component that is flexible enough to insert custom content in the modal. 
 
-## Development server
+### Your solution
+I created two components. One is a carousel located at 'src/ui/carousel'. This is taking advantage of a third party library (bootstrap)
+to render the carousel. I wanted to see what bootstrap had for us in the latest angular version.
+It is being used in the component 'src/components/carousel-demo'. The other component is a customizable modal component located (no framework, custom)
+at 'src/ui/modal' that can be customized with a title / heading and custom contnent. The user can close this modal with the 'x' button. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Running the project
+1) Run 'npm install' from same directory as package.json to install npm / node dependencies.
+2) Install the angular CLI (npm i @angular/cli or npm install -g @angular/cli) -
+      https://www.npmjs.com/package/@angular/cli so we can run 'ng' commands;
+3) Run 'npm run start' or 'ng serve' from root directory (package.json scripts)
+4) Application will then load on 'http://localhost:4200'
+5) To see the carousel go to: 'http://localhost:4200/carousel'
+6) To see the modal dialog, go to: 'http://localhost:4200/modal'
 
-## Code scaffolding
+### Link
+https://github.com/jakekussv/angular-demo-ui-components/tree/master
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You can also see some of my work at (Responsive Website I made for my band):
+http://www.youngamericansbowie.com/
+https://github.com/jakekussv/YoungAmericansBowie
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

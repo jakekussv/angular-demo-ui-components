@@ -1,40 +1,28 @@
-import {Component, ViewChild, OnInit} from '@angular/core';
-import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'carousel',
+  selector: 'random-image-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements OnInit {
+export class RandomImageCarouselComponent implements OnInit {
   images: Array<string> = [];
-
-  @ViewChild('carousel', {static : true}) carousel: NgbCarousel | undefined;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.images = [Math.random(),Math.random(),Math.random()].map(randomNumber => `https://picsum.photos/900/500?random&t=${randomNumber}`)
+    this.generateInitialImages();
+    setInterval(()=> {
+     this.addImage();
+    }, 5000)
   }
 
-  startCarousel(): void {
-    this.carousel?.cycle();
+  private generateInitialImages(): void {
+    this.images = [Math.random(),Math.random(),Math.random()].map(
+      randomNumber => `https://picsum.photos/900/500?random&t=${randomNumber}`)
   }
 
-  pauseCarousel(): void {
-    this.carousel?.pause();
+  private addImage(): void {
+    this.images.push(`https://picsum.photos/900/500?random&t=${Math.random()}`)
   }
-
-  moveNext(): void {
-    this.carousel?.next();
-  }
-
-  getPrev(): void {
-    this.carousel?.prev();
-  }
-
-  goToSlide(slide: string): void {
-    this.carousel?.select(slide);
-  }
-
 }

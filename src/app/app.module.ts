@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NgbCarouselModule } from "@ng-bootstrap/ng-bootstrap";
 import { CarouselDemoComponent } from '../components/carousel-demo/carousel-demo.component';
 import { ModalDemoComponent } from "../components/modal-demo/modal-demo.component";
-import { CarouselComponent } from "../ui/carousel/carousel.component";
+import { RandomImageCarouselComponent } from "../ui/carousel/carousel.component";
 import { ModalComponent } from "../ui/modal/modal.component";
 import  { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -14,7 +14,7 @@ import  { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     CarouselDemoComponent,
     ModalDemoComponent,
-    CarouselComponent,
+    RandomImageCarouselComponent,
     ModalComponent
   ],
   imports: [
