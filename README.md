@@ -23,6 +23,9 @@ at 'src/ui/modal' that can be customized with a title / heading and custom contn
 
 ### Link
 https://github.com/jakekussv/angular-demo-ui-components/tree/master
+Specific files:
+Modal - https://github.com/jakekussv/angular-demo-ui-components/tree/master/src/ui/modal
+Carousel - https://github.com/jakekussv/angular-demo-ui-components/tree/master/src/ui/carousel
 
 You can also see some of my work at (Responsive Website I made for my band):
 http://www.youngamericansbowie.com/
